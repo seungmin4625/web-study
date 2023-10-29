@@ -54,4 +54,9 @@ app.get("/restaurants", function (req, res) {
   });
 });
 
+app.get("/restaurants/:id", function (req, res) {
+  const restaurantId = req.params.id;
+  res.render("restaurant-detail", { rid: restaurantId });
+});
+
 app.listen(3000);
